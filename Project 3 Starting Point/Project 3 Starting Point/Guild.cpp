@@ -8,29 +8,34 @@ Guild::~Guild()
 {
 }
 
-void Guild::AddMage(std::string name)
+void Guild::AddAdvenClass(std::shared_ptr<AdvenClass> newAdven)
 {
-	auto magePtr = std::make_shared<Mage>(name);
-	_mages.push_back(magePtr);
+	_advClass.push_back(newAdven);
 }
 
-void Guild::AddPaladin(std::string name)
-{
-	auto paladin = std::make_shared<Paladin>(name);
-	_paladins.push_back(paladin);
-}
-
-void Guild::AddRanger(std::string name)
-{
-	auto ranger = std::make_shared<Ranger>(name);
-	_rangers.push_back(ranger);
-}
-
-void Guild::AddWarrior(std::string name)
-{
-	auto warrior = std::make_shared<Warrior>(name);
-	_warriors.push_back(warrior);
-}
+//void Guild::AddMage(std::string name)
+//{
+//	auto magePtr = std::make_shared<Mage>(name);
+//	_mages.push_back(magePtr);
+//}
+//
+//void Guild::AddPaladin(std::string name)
+//{
+//	auto paladin = std::make_shared<Paladin>(name);
+//	_paladins.push_back(paladin);
+//}
+//
+//void Guild::AddRanger(std::string name)
+//{
+//	auto ranger = std::make_shared<Ranger>(name);
+//	_rangers.push_back(ranger);
+//}
+//
+//void Guild::AddWarrior(std::string name)
+//{
+//	auto warrior = std::make_shared<Warrior>(name);
+//	_warriors.push_back(warrior);
+//}
 
 std::string Guild::GetInfo()
 {
