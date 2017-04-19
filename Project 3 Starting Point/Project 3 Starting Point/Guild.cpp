@@ -41,7 +41,7 @@ std::string Guild::GetInfo()
 {
 	std::string output = "Your guild has: \n";	
 
-	output += _advClass.size()		> 0 ? /*std::to_string*/(std::make_shared<Mage>) + " mages\n" : "No mages!\n";
+	output += _advClass.size()		> 0 ? std::to_string(_advClass.size()) + " mages\n" : "No mages!\n";
 	//output += _rangers.size()	> 0 ? std::to_string(_rangers.size()) + " rangers\n" : "No rangers!\n";
 	//output += _warriors.size()	> 0 ? std::to_string(_warriors.size()) + " warriors\n" : "No warriors!\n";
 	//output += _paladins.size()	> 0 ? std::to_string(_paladins.size()) + " paladins\n" : "No paladins!\n";
@@ -102,9 +102,31 @@ std::string Guild::GetInfo()
 std::string Guild::AttackWithAllAdventurers()
 {
 	std::string output = "You command everyone to attack! \n";
-	output += AttackWithMages();
-	output += AttackWithPaladins();
-	output += AttackWithRangers();
-	output += AttackWithWarriors();
+	
+	if (_advClass.size() > 0) {
+		for (auto mage : _advClass) {
+			output += mage->Attack() + "\n";
+		}
+	}
+		if (_advClass.size() > 0) {
+			for (auto ranger : _advClass) {
+				output += ranger->Attack() + "\n";
+			}
+		}
+		if (_advClass.size() > 0) {
+			for (auto paladin : _advClass) {
+				output += paladin->Attack() + "\n";
+			}
+		}
+		if (_advClass.size() > 0) {
+			for (auto warrior : _advClass) {
+				output += warrior->Attack() + "\n";
+			}
+
+		}
+	//output += AttackWithMages();
+	//output += AttackWithPaladins();
+	//output += AttackWithRangers();
+	//output += AttackWithWarriors();
 	return output;
 }

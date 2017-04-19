@@ -11,7 +11,7 @@ public:
 	AdvenClass(std:: string _name);
 	~AdvenClass();
 
-	std::string GetName();
-	std::string virtual Attack();
+	std::string GetName() const { return _name; }
+	std::string virtual Attack() { return _name + "Attack with bare hands"; }
 };
 

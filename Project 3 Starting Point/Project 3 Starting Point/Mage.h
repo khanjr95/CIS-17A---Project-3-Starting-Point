@@ -10,7 +10,7 @@ public:
 	Mage(std::string name);
 	~Mage();
 
-	std::string GetName() const { return GetName(); }
+	std::string GetName() const { return _name; }
 	std::string Attack() { return GetName() + " casts magic missle at the darkness!"; }	
 };
 

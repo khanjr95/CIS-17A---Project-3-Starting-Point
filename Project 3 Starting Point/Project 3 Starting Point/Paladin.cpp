@@ -2,7 +2,7 @@
 
 
 
-Paladin::Paladin(std::string name) : _name(name)
+Paladin::Paladin(std::string name) : AdvenClass(name)
 {
 }
 
