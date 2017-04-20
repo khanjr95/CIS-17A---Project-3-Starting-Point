@@ -32,10 +32,10 @@ public:
 
 	std::string GetInfo();
 
-	std::string AttackWithMages();
-	std::string AttackWithPaladins();
-	std::string AttackWithRangers();
-	std::string AttackWithWarriors();
+//	std::string AttackWithMages();
+	//std::string AttackWithPaladins();
+	//std::string AttackWithRangers();
+	//std::string AttackWithWarriors();
 	std::string AttackWithAllAdventurers();
 };
 

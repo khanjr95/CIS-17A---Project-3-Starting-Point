@@ -2,7 +2,7 @@
 
 
 
-AdvenClass::AdvenClass(std::string _name)
+AdvenClass::AdvenClass(std::string name): _name(name)
 {
 }
 
