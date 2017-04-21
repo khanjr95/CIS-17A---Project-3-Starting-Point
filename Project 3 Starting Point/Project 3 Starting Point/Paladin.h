@@ -12,5 +12,6 @@ public:
 
 	//std::string GetName() const { return _name; }
 	std::string Attack() { return GetName() + " swings a giant maul at his foes!"; }
+	std::string ClassName() { return GetName() + " a Paladin"; }
 };
 

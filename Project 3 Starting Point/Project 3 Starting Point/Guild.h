@@ -32,6 +32,8 @@ public:
 
 	std::string GetInfo();
 
+	std::string AttackwithAdvenClass();
+
 //	std::string AttackWithMages();
 	//std::string AttackWithPaladins();
 	//std::string AttackWithRangers();

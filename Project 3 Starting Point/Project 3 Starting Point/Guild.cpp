@@ -47,16 +47,24 @@ std::string Guild::GetInfo()
 	//output += _rangers.size()	> 0 ? std::to_string(_rangers.size()) + " rangers\n" : "No rangers!\n";
 	//output += _warriors.size()	> 0 ? std::to_string(_warriors.size()) + " warriors\n" : "No warriors!\n";
 	//output += _paladins.size()	> 0 ? std::to_string(_paladins.size()) + " paladins\n" : "No paladins!\n";
+	for (auto character:_advClass)
+	{
+		output += character->ClassName() + "\n";
+	}
 	return output;
 }
 
 //
-//std::string Guild::AttackWithAdvenClass()
-//{
-//	std::string output = "You command your adventures to attack! \n";
-//
-//}
-//
+std::string Guild::AttackwithAdvenClass()
+{
+	std::string output = "You command your adventures to attack! \n";
+	for (auto character : _advClass)
+	{
+		output += character->Attack() + "\n";
+	}
+	return output;
+}
+
 //std::string Guild::AttackWithMages()
 //{
 //	std::string output = "You command your mages to attack! \n";

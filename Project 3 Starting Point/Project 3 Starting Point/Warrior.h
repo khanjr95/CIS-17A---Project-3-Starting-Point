@@ -11,5 +11,6 @@ public:
 
 	//std::string GetName() const { return _name; }
 	std::string Attack() { return GetName() + " shouts 'DO YOU LIKE MY SWORD SWORD SWORD MY DIAMOND SWORD!"; }
+	std::string ClassName() { return GetName() + " a Warrior"; }
 };
 
